@@ -82,12 +82,16 @@ export default function Login() {
               </Typography>
           </CardContent>
         </Card>
-        <Card sx={{marginTop:'2%'}}>
+        <Card sx={{marginTop:'2%',height:'12vh'}}>
             <CardContent>
-              <Typography sx={{color:'grey' , textAlign:'center' , height:'1vh' , marginTop:'2%'}} variant="subtitle1" >
+              
+                 <Typography sx={{color:'grey' , textAlign:'center' , height:'1vh' , marginTop:'2%'}} variant="subtitle1" >
                 Don't have an account? 
                 <Link to ='/signup' style={{textDecoration:'none' , color:'blue'}}>  Sign up </Link>
               </Typography>
+             
+             
+
           </CardContent>
         </Card>
       </div>

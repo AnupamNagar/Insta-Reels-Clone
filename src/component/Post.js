@@ -55,13 +55,16 @@ function Post({userdata}) {
         <div className='video-container'>
             {
                 posts.map((post , index) =>(
-                    <React.Fragment key={index}>
+                 
+                    <React.Fragment key={index}
+
+                    >
                         <div className='videos'>
                             <Videos src = {post.pUrl}></Videos>
                             <div className='video-info'>
-                                <div style={{display:'flex'}}>
-                                    <Avatar  src={userdata.profileUrl}/>
-                                    <h4>{userdata.fullname}</h4>
+                            <div style={{display:'flex'}}>
+                                    <Avatar  src={post.uprofile}/>
+                                    <h4>{post.uName}</h4>
                                 </div>
                             </div>
                             <div className='like-info'>

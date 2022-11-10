@@ -23,6 +23,8 @@ import insta from '../images/instagram.png';
 import HomeIcon from '@mui/icons-material/Home';
 import ExploreIcon from '@mui/icons-material/Explore';
 import Avatar from '@mui/material/Avatar';
+import "./navbar.css"
+import Uploadfile from './Uploadfile';
 
 
 export default function Navbar({userdata}) {
@@ -83,6 +85,7 @@ export default function Navbar({userdata}) {
     >
       <MenuItem onClick={handleprofile}> <AccountCircleIcon /> <p>&nbsp; &nbsp;</p>Profile</MenuItem>
       <MenuItem onClick={handlelogout}><ExitToAppIcon /> <p>&nbsp; &nbsp;</p>Log out</MenuItem>
+      
     </Menu>
   );
 
@@ -111,14 +114,15 @@ export default function Navbar({userdata}) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" sx={{background:'white'}}>
-        <Toolbar>
+        <Toolbar class="navbar">
           <div style={{marginLeft:'5%'}}>
             <img alt='' src={insta}  onClick={handlebannerclick} style={{width:'20vh', cursor:'pointer'}}></img>
           </div>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' , color:'black' , alignItems:'center' , marginRight:'2rem'} }}>
-            <HomeIcon onClick={handlebannerclick} sx={{cursor:'pointer', marginRight:'1.5rem' , height:'2rem' , width:'2rem'}} ></HomeIcon>
-            <ExploreIcon onClick={handlebannerclick} sx={{cursor:'pointer' ,marginRight:'1rem', height:'2rem' , width:'2rem'}} ></ExploreIcon>
+          {/* <Box sx={{ flexGrow: 1 }} /> */}
+          <Box class="icons" >
+          <Uploadfile/>
+            <HomeIcon onClick={handlebannerclick}  ></HomeIcon>
+            <ExploreIcon onClick={handlebannerclick} ></ExploreIcon>
             <IconButton
               size="large"
               edge="end"
@@ -131,7 +135,7 @@ export default function Navbar({userdata}) {
               <Avatar src={userdata.profileUrl} sx={{height:'2rem' , width:'2rem'}}/>
             </IconButton>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+          {/* <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="show more"
@@ -142,7 +146,7 @@ export default function Navbar({userdata}) {
             >
               <MoreIcon />
             </IconButton>
-          </Box>
+          </Box> */}
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

@@ -4,8 +4,9 @@
     justify-content: center;
 }
 .login-card{
-    width: 27vw;
+    width: 50%!important;
     margin-top: 5%;
+    height:50%!important;
 }
 .insta-logo{
     width: 100%;

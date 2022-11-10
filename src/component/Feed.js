@@ -23,14 +23,14 @@ function Feed() {
 
     <>
         <Navbar userdata ={userdata}></Navbar>
-        <div style={{display:'flex' , justifyContent:'center' , alignItems:'center' , flexDirection:'column'}}>
+        <div style={{display:'flex' , justifyContent:'center' , alignItems:'center' , flexDirection:'column',marginTop:'15vh'}}>
             {/* <div style={{width:'50%'}}>
                 <h1>Wlcome</h1> 
                 <button onClick={logout}>log out</button>
                 
             </div> */}
             
-            <Uploadfile user = {userdata}></Uploadfile>
+            {/* <Uploadfile user = {userdata}></Uploadfile> */}
             <Post userdata = {userdata}></Post>
         </div>
     </>
