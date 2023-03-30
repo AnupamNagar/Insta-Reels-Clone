@@ -65,7 +65,8 @@ function Uploadfile(props) {
             }).then(()=>{
                 setloading(false)
             }).catch((err) =>{
-                seterror(err.message)
+                seterror(err.message);
+                console.log(err.response);
                 setTimeout(() => {
                     seterror('')
                 }, 3000);
