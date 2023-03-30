@@ -52,7 +52,7 @@ function Uploadfile(props) {
                 comments : [],
                 pId: uid,
                 pUrl: url,
-                uName: props.user.fullname,
+//                 uName: props.user.fullname,
                 uprofile : props.user.profileUrl,
                 userId : props.user.userId,
                 createdAt : database.getTimeStamp()
