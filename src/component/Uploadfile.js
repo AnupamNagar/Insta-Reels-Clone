@@ -53,7 +53,7 @@ function Uploadfile(props) {
                 pId: uid,
                 pUrl: url,
 //                 uName: props.user.fullname,
-                uprofile : props.user.profileUrl,
+//                 uprofile : props.user.profileUrl,
                 userId : props.user.userId,
                 createdAt : database.getTimeStamp()
             }
@@ -66,7 +66,7 @@ function Uploadfile(props) {
                 setloading(false)
             }).catch((err) =>{
                 seterror(err.message);
-                console.log(err.response);
+//                 console.log(err.response);
                 setTimeout(() => {
                     seterror('')
                 }, 3000);
